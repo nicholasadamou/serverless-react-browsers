@@ -10,7 +10,6 @@ const GlobalStyles = createGlobalStyle`
 	  --green: #10b500;
 	  --yellow: #fff498;
 
-
 	  --copy-size: 1rem;
 	}
 
