@@ -29,8 +29,6 @@ This project uses the following technologies:
 **The Front-End**:
 
 - [**React.js**](https://reactjs.org/) - For building the interface along with:
-  - [**React Context API**](https://reactjs.org/docs/context.html) - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
-  - [**React Hooks**](https://reactjs.org/docs/hooks-intro.html) - Hooks let you use state and other React features without writing a class
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
 
 **The Back-End**:
