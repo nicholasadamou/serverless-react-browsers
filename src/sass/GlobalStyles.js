@@ -9,6 +9,9 @@ const GlobalStyles = createGlobalStyle`
 	  --light-grey: #ccc;
 	  --green: #10b500;
 	  --yellow: #fff498;
+
+
+	  --copy-size: 1rem;
 	}
 
 	* {
@@ -24,8 +27,9 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
-	  font-family: "Roboto Slab" sans-serif;
+	  font-family: "Roboto Slab", sans-serif;
 	  color: var(--black);
+          font-size: var(--copy-size);
 
 	  background: var(--white);
 	}
