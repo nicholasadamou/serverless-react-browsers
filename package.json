@@ -14,13 +14,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "postinstall": "netlify-lambda install",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "test": "react-scripts test",
+    "postinstall": "netlify-lambda install",
     "netlify": "netlify dev",
     "update": "npx yarn-check -u",
-    "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
-    "test": "exit 0"
+    "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json"
   },
   "eslintConfig": {
     "extends": "react-app"
