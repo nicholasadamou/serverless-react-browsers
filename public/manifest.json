@@ -1,6 +1,6 @@
 {
-  "name": "Nicholas Adamou",
-  "short_name": "Nicholas Adamou - He is a web developer, and an open source contributor.",
+  "name": "Serverless React Browsers",
+  "short_name": "serverless-react-browsers",
   "icons": [
     {
       "src": "assets/favicons/favicon-16x16.png",
@@ -8,8 +8,8 @@
       "type": "image/png"
     },
     {
-      "src": "assets/favicons/favicon-96x96.png",
-      "sizes": "96x96",
+      "src": "assets/favicons/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     }
   ],
