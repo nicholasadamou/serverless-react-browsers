@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
 	body {
 	  font-family: "Roboto Slab", sans-serif;
 	  color: var(--black);
-          font-size: var(--copy-size);
+	  font-size: var(--copy-size);
 
 	  background: var(--white);
 	}

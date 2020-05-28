@@ -21,15 +21,6 @@ const Container = styled.div`
   margin-top: 40px;
   margin-bottom: 20px;
 
-  &.is-emphasized {
-    -webkit-animation: tada;
-    animation: tada;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-
   ${until(
 	device.iPhone(),
 	() => `
@@ -162,7 +153,7 @@ const Mobile = styled.div`
   }
 `;
 
-const Website = (title, link, desktop, mobile) => (
+const Website = (title = '', link = '#', desktop = '', mobile = '') => (
 	<Container className="website">
 		<a
 			href={link}
@@ -173,9 +164,14 @@ const Website = (title, link, desktop, mobile) => (
 			<Browser>
 				<img src={desktop} alt="web-browser"/>
 			</Browser>
-			<Mobile>
-				<img src={mobile} alt="mobile-device"/>
-			</Mobile>
+			{mobile !== ''
+				?
+					<Mobile>
+						<img src={mobile} alt="mobile-device"/>
+					</Mobile>
+				:
+					''
+			}
 		</a>
 		<h3>{title}</h3>
 	</Container>

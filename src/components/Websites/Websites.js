@@ -39,8 +39,7 @@ const Websites = () => (
 		{Website(
 			"StackOverFlow",
 			"https://stackoverflow.com/",
-			getImageURL("stackoverflow.com"),
-			getImageURL("stackoverflow.com", "mobile")
+			getImageURL("stackoverflow.com")
 		)}
 		{Website(
 			"CodePen",
