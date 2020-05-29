@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "5.8.0",
     "@testing-library/react": "10.0.4",
     "@testing-library/user-event": "10.3.5",
+    "github-api": "^3.3.0",
     "netlify": "4.1.7",
     "netlify-lambda": "1.6.3",
     "react": "16.13.1",
@@ -39,8 +40,12 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/core": "4.10.0",
     "animate.css": "4.1.0",
     "animate.css-react": "1.0.0",
+    "carbon-components": "10.12.0",
+    "carbon-components-react": "7.12.0",
+    "carbon-icons": "7.0.7",
     "env-create-react-app": "1.1.1",
     "node-sass": "4.14.1",
     "styled-components": "5.1.1"

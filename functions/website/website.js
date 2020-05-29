@@ -36,9 +36,9 @@ async function getScreenshot(url, device = "desktop", type = "png") {
 		await page.emulate(devices["iPhone X"]);
 	} else {
 		await page.setViewport({
-			width: 1600,
-			height: 900,
-			deviceScaleFactor: 1.5,
+			width: 1024,
+			height: 640,
+			deviceScaleFactor: 2,
 		});
 	}
 
@@ -47,7 +47,15 @@ async function getScreenshot(url, device = "desktop", type = "png") {
 		timeout: 0,
 	});
 
-	const data = await page.screenshot(type);
+	let data = '';
+
+	if (url.includes('README.md')) {
+		const element = await page.$('#readme');
+		data = await element.screenshot(type);
+	} else {
+		data = await page.screenshot(type);
+	}
+
 	const screenshot = data.toString("base64");
 
 	await browser.close();

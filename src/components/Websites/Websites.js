@@ -1,8 +1,10 @@
 import React from "react";
 
-import Website from "./components/Website/Website";
+import Website, { GitHubProject } from "./components/Website/Website";
 
 import styled from "styled-components";
+
+import { getImageURL } from '../../utilities/utilities';
 
 const Sites = styled.div`
 	display: -webkit-box;
@@ -15,27 +17,13 @@ const Sites = styled.div`
 
 	margin: 0 20px 4rem;
 
-	max-width: 900px;
+	max-width: 1280px;
 	margin: 0 auto;
 `;
 
-const getImageURL = (url, device = "desktop") => {
-	let prefix = `${window.location.protocol}//${window.location.hostname}`;
-
-	if (window.location.href.includes("localhost"))
-		prefix = `${window.location.protocol}//${window.location.hostname}:8888`;
-
-	return `${prefix}/.netlify/functions/website?url=${url}&device=${device}`;
-};
-
 const Websites = () => (
 	<Sites>
-		{Website(
-			"GitHub",
-			"https://github.com/",
-			getImageURL("github.com"),
-			getImageURL("github.com", "mobile")
-		)}
+		{GitHubProject('serverless-react-browsers')}
 		{Website(
 			"StackOverFlow",
 			"https://stackoverflow.com/",

@@ -1,3 +1,5 @@
+import GitHub from "github-api";
+
 export const isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
@@ -25,6 +27,26 @@ export const isMobile = {
 	},
 };
 
-export default {
-	isMobile,
+export const github = new GitHub({
+	username: "nicholasadamou",
+	token: process.env.REACT_APP_GITHUB_TOKEN,
+  });
+
+export const getImageURL = (url, device = "desktop") => {
+	let prefix = `${window.location.protocol}//${window.location.hostname}`;
+
+	if (window.location.href.includes("localhost"))
+		prefix = `${window.location.protocol}//${window.location.hostname}:8888`;
+
+	if (url.includes('http://') || url.includes('https://') || url.includes('www.')) {
+		url = url.replace('http://', '').replace('https://', '').replace('www.', '');
+	}
+
+	return `${prefix}/.netlify/functions/website?url=${url}&device=${device}`;
 };
+
+  export default {
+	isMobile,
+	github,
+	getImageURL
+  };

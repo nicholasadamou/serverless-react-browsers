@@ -32,6 +32,18 @@ const GlobalStyles = createGlobalStyle`
 
 	  background: var(--white);
 	}
+
+	.MuiCircularProgress-root {
+		width: 20px !important;
+		height: 20px !important;
+
+		circle {
+			stroke: var(--black);
+		}
+	}
+	.bx--skeleton__text {
+		height: 0.75rem;
+	}
 `;
 
 export default GlobalStyles;

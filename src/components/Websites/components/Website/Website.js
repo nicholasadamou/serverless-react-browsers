@@ -1,8 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from "react";
 
 import styled from "styled-components";
 
+import { SkeletonText } from "carbon-components-react";
+
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 import {device, until} from "../../../../utilities/mixins";
+
+import { getImageURL } from '../../../../utilities/utilities';
+
+import useGitHub from '../../../../hooks/useGithub';
 
 const Container = styled.div`
   display: -webkit-box;
@@ -84,10 +94,16 @@ const Container = styled.div`
 `;
 
 const Browser = styled.div`
+	display: grid;
+	place-content: center;
+
   position: relative;
 
   width: 98%;
-  min-height: 50px;
+  min-height: 160px;
+	max-height: 200px;
+
+	overflow-y: hidden;
 
   border: 0px solid var(--black);
   border-width: 20px 0 0 0;
@@ -177,4 +193,48 @@ const Website = (title = '', link = '#', desktop = '', mobile = '') => (
 	</Container>
 );
 
+const GitHubProject = (name) => {
+	const repository = useGitHub(name);
+
+	if (JSON.stringify(repository) === '{}') return <SkeletonGitHubProject />
+
+	const { title, link } = repository;
+
+	return (
+		<Container className="website">
+			<a
+				href={link}
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+			>
+				<Browser>
+					<img src={getImageURL(link)} alt="web-browser" />
+				</Browser>
+			</a>
+			<h3>{title}</h3>
+		</Container>
+	)
+};
+
+const SkeletonGitHubProject = () => (
+	<Container className="website">
+		<a
+			href='#'
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+		>
+			<Browser>
+				<CircularProgress />
+			</Browser>
+		</a>
+		<h3>
+			<SkeletonText heading={false} lineCount={1} paragraph width="100%" />
+		</h3>
+	</Container>
+);
+
 export default Website;
+
+export { GitHubProject }
