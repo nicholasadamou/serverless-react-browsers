@@ -1,4 +1,4 @@
-# Serverless React Browsers [![Build Status](https://travis-ci.org/nicholasadamou/serverless-react-browsers.svg?branch=master)](https://travis-ci.org/nicholasadamou/serverless-react-browsers)
+# Serverless React Browsers [![Build Status](https://travis-ci.org/nicholasadamou/serverless-react-browsers.svg?branch=master)](https://travis-ci.org/nicholasadamou/serverless-react-browsers) [![CircleCI](https://circleci.com/gh/nicholasadamou/serverless-react-browsers.svg?style=svg)](https://circleci.com/gh/nicholasadamou/serverless-react-browsers)
 
 ![preview](preview.png)
 
@@ -8,18 +8,21 @@ A React-based application that utilizes a serverless lambda function which spawn
 
 ### Requirements
 
--   [Node.js](https://nodejs.org/en/)
--   [Yarn](https://yarnpkg.com/en/) (recommended)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/) (recommended)
 
 ### Steps
 
-Starting the front-end and *Netlify* serverless (λ) functions:
+Run the live-reload server on <http://localhost:3000>
 
 ```bash
-git clone https://github.com/nicholasadamou/serverless-react-browsers
-cd serverless-react-browsers
-npx yarn install
-npx yarn netlify
+make dev
+```
+
+Or run the live-reload server on <http://localhost:8888> with _Netlify_ (λ) functions:
+
+```bash
+make netlify
 ```
 
 ## 📚 The Tech. Stack
@@ -40,6 +43,7 @@ This project uses the following technologies:
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/serverless-react-browsers) - Travis is used to test whether or not this project builds successfully.
+2. [**CircleCI**](https://circleci.com/) - Used for the same reason as Travis CI.
 
 ## License
 
