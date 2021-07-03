@@ -164,13 +164,12 @@ const Website = (title = '', link = '#', desktop = '', mobile = '') => (
 			<Browser>
 				<img src={desktop} alt="web-browser"/>
 			</Browser>
-			{mobile !== ''
-				?
+			{
+				mobile !== '' && (
 					<Mobile>
 						<img src={mobile} alt="mobile-device"/>
 					</Mobile>
-				:
-					''
+				)
 			}
 		</a>
 		<h3>{title}</h3>
