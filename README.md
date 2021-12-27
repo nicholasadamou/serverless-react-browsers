@@ -1,4 +1,4 @@
-# Serverless React Browsers [![Build Status](https://travis-ci.org/nicholasadamou/serverless-react-browsers.svg?branch=master)](https://travis-ci.org/nicholasadamou/serverless-react-browsers) [![CircleCI](https://circleci.com/gh/nicholasadamou/serverless-react-browsers.svg?style=svg)](https://circleci.com/gh/nicholasadamou/serverless-react-browsers)
+# Serverless React Browsers [![CircleCI](https://circleci.com/gh/nicholasadamou/serverless-react-browsers.svg?style=svg)](https://circleci.com/gh/nicholasadamou/serverless-react-browsers)
 
 ![preview](preview.png)
 
@@ -42,8 +42,7 @@ This project uses the following technologies:
 
 This project uses the following CI/CD Pipeline:
 
-1. [**Travis CI**](https://travis-ci.org/nicholasadamou/serverless-react-browsers) - Travis is used to test whether or not this project builds successfully.
-2. [**CircleCI**](https://circleci.com/) - Used for the same reason as Travis CI.
+1. [**CircleCI**](https://circleci.com/) - CircleCI is used to test whether or not this project builds successfully.
 
 ## License
 
